@@ -1,0 +1,22 @@
+#!/bin/sh
+
+indent() {
+  sed -u 's/^/       /'
+}
+
+echo "-----> Installing pngquant"
+BUILD_DIR=$1
+VENDOR_DIR="vendor"
+PNGQUANT_DOWNLOAD_URL=""
+
+echo "PNGQUANT_DOWNLOAD_URL = " $PNGQUANT_DOWNLOAD_URL | indent
+
+cd $BUILD_DIR
+mkdir -p $VENDOR_DIR
+cd $VENDOR_DIR
+curl -L --silent $PNGQUANT_DOWNLOAD_URL | tar xz
+
+echo "exporting PATH" | indent
+PROFILE_PATH="$BUILD_DIR/.profile.d/pngquant.sh"
+mkdir -p $(dirname $PROFILE_PATH)
+echo 'export PATH="$PATH:vendor/pngquant/bin"' >> $PROFILE_PATH
