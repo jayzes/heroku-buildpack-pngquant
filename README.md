@@ -11,8 +11,8 @@ Usage
 -----
 Add a `.buildpacks` file to the root of your repo that contains this buildpack URL and your real buildpack URL:
 
-    https://github.com/shunjikonishi/heroku-buildpack-ffmpeg
-    https://github.com/heroku/heroku-buildpack-play
+    https://github.com/jayzes/heroku-buildpack-pngquant
+    https://github.com/heroku/heroku-buildpack-ruby
 
 Then create an application using the multi buildpack:
 
