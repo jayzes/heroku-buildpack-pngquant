@@ -24,5 +24,5 @@ or configure an existing application:
 
 You can verify that everything is properly installed by running the following command:
 
-    $ heroku run "ffmpeg -version"
+    $ heroku run "pngquant -h"
 
