@@ -15,6 +15,7 @@ cd $BUILD_DIR
 mkdir -p $VENDOR_DIR/pngquant/bin
 cd $VENDOR_DIR
 curl -L --silent -o pngquant/bin/pngquant $PNGQUANT_DOWNLOAD_URL
+chmod +x pngquant/bin/pngquant
 
 echo "exporting PATH" | indent
 PROFILE_PATH="$BUILD_DIR/.profile.d/pngquant.sh"
